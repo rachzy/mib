@@ -12,7 +12,8 @@ The application was created using NextJS with Typescript
 ![Screenshot_3](https://user-images.githubusercontent.com/59806140/188284425-ab9522d2-cbff-475b-80f9-8d4ae9d7946d.png)
 
 ## Credits
-Hoverboard image: https://br.pinterest.com/pin/5629568274174873/
+In this project, I've used some images for fictional representation of some projects. Here are the credits for all of them: <br />
+Hoverboard image: https://br.pinterest.com/pin/5629568274174873/ <br />
 Hologram image: https://br.pinterest.com/pin/798966790157672770/
 
 ## License
