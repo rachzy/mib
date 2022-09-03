@@ -1,6 +1,6 @@
-import { GetServerSideProps } from "next";
 import Image from "next/image";
-import { FunctionComponent } from "react";
+import { useRouter } from "next/router";
+import { FunctionComponent, useState } from "react";
 
 import projects from "../asset/projects.json";
 import Footer from "../components/Footer/Footer";
@@ -16,11 +16,23 @@ interface IProject {
   imgSrc: string;
 }
 
-interface IProps {
-  project: IProject;
-}
+const ProjectPage: FunctionComponent = () => {
+  const router = useRouter();
+  const { query } = router;
 
-const ProjectPage: FunctionComponent<IProps> = ({ project }) => {
+  if(!query || !query.projectTitle) return null;
+
+  const {projectTitle} = query;
+
+  if (!projectTitle) {
+    return null;
+  }
+
+  const project = projects.filter(
+    (project: IProject) =>
+      project.title.toUpperCase() === projectTitle?.toString().toUpperCase()
+  )[0];
+
   return (
     <MainWrapper centered={true} fadeIn={true}>
       <Menu elements={projects} displayLogo={true} />
@@ -45,19 +57,6 @@ const ProjectPage: FunctionComponent<IProps> = ({ project }) => {
       <Footer />
     </MainWrapper>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { projectTitle } = context.query;
-  const getProject = projects.filter(
-    (project) =>
-      project.title.toUpperCase() === projectTitle?.toString().toUpperCase()
-  );
-  return {
-    props: {
-      project: getProject[0],
-    },
-  };
 };
 
 export default ProjectPage;
