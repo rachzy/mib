@@ -1,6 +1,7 @@
 .parallelogramContainer {
   display: flex;
   text-align: center;
+  margin: 4vh;
 }
 
 .parallelogramContainer div {
@@ -14,8 +15,9 @@
   transform: skewX(-10deg);
 }
 
-.parallelogramContainer div div {
+.parallelogramContainer div div{
   transform: skewX(10deg);
+  padding: 5vh;
 }
 
 .parallelogramContainer h1 {
@@ -28,6 +30,7 @@
 
 .parallelogramContainer p {
   font-family: "Poppins", sans-serif;
+  text-align: justify;
   font-size: 2.5vh;
 }
 

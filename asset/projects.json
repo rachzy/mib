@@ -2,13 +2,13 @@
   {
     "id": 0,
     "title": "Feather",
-    "description": "Feather is a flying hoverboard",
+    "description": "Feather © is a flying hoverboard that allows you to (truly) hover around a place at a limited height and speed. But how does it do that? With nitrogen! With a powerful combination of electricity and nitrogen, it boosts you from the ground! Feather is currently distributed in 3 versions: Tailwind, Racefox and Fairytale.",
     "imgSrc": "hoverboard.jpg"
   },
   {
     "id": 1,
     "title": "Holograms",
-    "description": "Feather is a flying hoverboard",
+    "description": "The MIB Holograms © are holographic displays that come out of a Hologram table and are displayed in custom physical lights.",
     "imgSrc": "hologram.png"
   }
 ]

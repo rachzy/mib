@@ -36,7 +36,7 @@ const ProjectPage: FunctionComponent<IProps> = ({ project }) => {
             />
           </div>
         </div>
-        <div className="container" style={{ backgroundColor: "#111" }}>
+        <div style={{ backgroundColor: "#111" }}>
           <div>
             <p>{project.description}</p>
           </div>
