@@ -1,0 +1,149 @@
+div.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+ul.menu {
+  display: flex;
+  position: absolute;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  list-style: none;
+}
+
+.menuMobile {
+  display: none;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1vh 2vh;
+  width: 30vh;
+
+  transition: 0.2s all;
+
+  z-index: 999;
+}
+
+.logo img {
+  transition: 0.2s all;
+  cursor: pointer;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  margin-left: 2.5vh;
+}
+
+ul.menu li {
+  background-color: white;
+  color: black;
+
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 2.5vh;
+  font-weight: 600;
+
+  transform: skewX(-10deg);
+  border-radius: 2px;
+
+  padding: 0.5vh;
+  margin: 2vh;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+ul.menu li:hover {
+  color: orange;
+}
+
+ul.menu div.separator {
+  height: 1px;
+  width: 20px;
+  background-color: white;
+}
+
+/* HAMBURGER AND MOBILE MENU */
+
+.hamburgerLines {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    background-color: rgb(14, 14, 14);
+    box-shadow: 4px 4px 4px black;
+
+    width: 0vh;
+    height: 100vh;
+    right: 0;
+
+    padding-top: 10vh;
+    align-items: flex-start;
+
+    z-index: 1000;
+    transition: 0.5s all;
+  }
+
+  .menuMobile.active {
+    width: 40%;
+  }
+
+  ul.menu {
+    display: none;
+  }
+
+  .menuMobile ul {
+    margin-left: -2vh;
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .menuMobile li {
+    border: 1px solid white;
+    padding: 1vh;
+    margin-bottom: 1vh;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburgerLines {
+    display: flex;
+    flex-direction: column;
+    height: 26px;
+    width: 32px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 3vh;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburgerLines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+}

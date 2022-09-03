@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "title": "Feather",
+    "description": "Feather is a flying hoverboard",
+    "imgSrc": "hoverboard.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Holograms",
+    "description": "Feather is a flying hoverboard",
+    "imgSrc": "hologram.png"
+  }
+]

@@ -1,0 +1,69 @@
+.parallelogramContainer {
+  display: flex;
+  text-align: center;
+}
+
+.parallelogramContainer div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 3vh;
+  transform: skewX(-10deg);
+}
+
+.parallelogramContainer div div {
+  transform: skewX(10deg);
+}
+
+.parallelogramContainer h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 1000;
+  font-style: italic;
+  font-size: 6vh;
+  line-height: 5px;
+}
+
+.parallelogramContainer p {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5vh;
+}
+
+.parallelogramContainer.small div {
+  width: 10vh;
+  height: 10vh;
+}
+.parallelogramContainer.medium div {
+  width: 30vh;
+  height: 30vh;
+}
+
+.parallelogramContainer.large div {
+  width: 60vh;
+  height: 60vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .parallelogramContainer.large div {
+    width: 50vh;
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .parallelogramContainer {
+    flex-direction: column;
+    margin-top: 20vh;
+  }
+
+  .parallelogramContainer div,
+  .parallelogramContainer div div {
+    transform: skewX(0deg);
+  }
+
+  .parallelogramContainer div div:nth-child(2) {
+    justify-content: start;
+  }
+}

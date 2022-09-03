@@ -1,0 +1,29 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+
+  transition: 2s all;
+
+  overflow-x: hidden;
+}
+
+.mainWrapper.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.mainWrapper.fadeIn {
+  animation: fadeIn 3s;
+}

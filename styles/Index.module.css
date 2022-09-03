@@ -1,0 +1,13 @@
+p.slogan {
+  font-size: 3vh;
+  font-family: "Poppins", sans-serif;
+
+  margin: 1% 1% 1% 10px;
+
+  opacity: 0%;
+  transition: 1.5s all;
+}
+
+p.slogan.active {
+  opacity: 100%;
+}

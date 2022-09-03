@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  position: fixed;
+
+  background-color: black;
+  bottom: 0;
+
+  padding: 2vh;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5vh;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+}

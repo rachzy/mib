@@ -1,0 +1,26 @@
+@keyframes letter-fadeIn {
+  0% {
+    width: 0%;
+  }
+  40% {
+    width: 0vh;
+  }
+  100% {
+    width: 25vh;
+  }
+}
+
+h1.logoTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12vh;
+
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+
+  width: 25vh;
+}
+
+h1.logoTitle.animation {
+  animation: letter-fadeIn 2s;
+}
