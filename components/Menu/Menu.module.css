@@ -46,6 +46,52 @@ ul.menu {
   margin-left: 2.5vh;
 }
 
+.loginIcon {
+  position: fixed;
+
+  top: 0;
+  margin: 30px 5%;
+  right: 0;
+
+  transition: 0.2s all;
+
+  z-index: 999;
+  align-self: flex-end;
+}
+
+.loginBox {
+  position: absolute;
+  background-color: #222;
+
+  margin-left: -90px;
+  margin-top: 4vh;
+
+  width: 150px;
+
+  padding: 2vh;
+  z-index: 9999;
+}
+
+.loginBox button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 1vh;
+  margin-bottom: 1vh;
+  border-radius: 5px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.loginBox button:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
 ul.menu li {
   background-color: white;
   color: black;
@@ -106,6 +152,10 @@ ul.menu div.separator {
   }
 
   ul.menu {
+    display: none;
+  }
+
+  .loginIcon {
     display: none;
   }
 

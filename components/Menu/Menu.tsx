@@ -1,9 +1,12 @@
+import { Fragment, FunctionComponent, useState } from "react";
+import { useRouter } from "next/router";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { Fragment, FunctionComponent, useState } from "react";
 
 import classes from "./Menu.module.css";
+
+import { FaUser } from "react-icons/fa";
 
 interface IElement {
   title: string;
@@ -19,6 +22,7 @@ const Menu: FunctionComponent<IProps> = ({ elements, displayLogo }) => {
   const router = useRouter();
 
   const [menuActive, setMenuActive] = useState(false);
+  const [loginBoxActive, setLoginBoxActive] = useState(false);
 
   const renderProjects = () => {
     return elements.map((element, pos) => {
@@ -84,6 +88,13 @@ const Menu: FunctionComponent<IProps> = ({ elements, displayLogo }) => {
         className={`${classes.menuMobile} ${menuActive ? classes.active : ""}`}
       >
         <ul>{renderProjects()}</ul>
+      </div>
+      <div className={classes.loginIcon}>
+        <FaUser color={"white"} size={32} className={classes.loginIcon} onMouseOver={() => {setLoginBoxActive(true)}} />
+        <div className={classes.loginBox} style={loginBoxActive ? {display: "block"} : {display: "none"}} onMouseLeave={() => {setLoginBoxActive(false)}}>
+          <button>Login</button>
+          <button>Register</button>
+        </div>
       </div>
     </header>
   );
