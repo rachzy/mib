@@ -133,7 +133,7 @@ ul.menu div.separator {
     flex-direction: column;
     position: fixed;
 
-    background-color: rgb(14, 14, 14);
+    background-color: rgba(14, 14, 14, 0.9);
     box-shadow: 4px 4px 4px black;
 
     top: 0;
@@ -149,7 +149,7 @@ ul.menu div.separator {
   }
 
   .menuMobile.active {
-    width: 40%;
+    width: 40vh;
   }
 
   ul.menu {
