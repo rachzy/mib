@@ -63,8 +63,8 @@ ul.menu {
   position: absolute;
   background-color: #222;
 
-  margin-left: -90px;
   margin-top: 4vh;
+  margin-left: -90px;
 
   width: 150px;
 
@@ -105,7 +105,7 @@ ul.menu li {
   border-radius: 2px;
 
   padding: 0.5vh;
-  margin: 2vh;
+  margin-inline: 2vh;
 
   cursor: pointer;
   transition: 0.2s all;
@@ -127,7 +127,7 @@ ul.menu div.separator {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .menuMobile {
     display: flex;
     flex-direction: column;
@@ -136,6 +136,7 @@ ul.menu div.separator {
     background-color: rgb(14, 14, 14);
     box-shadow: 4px 4px 4px black;
 
+    top: 0;
     width: 0vh;
     height: 100vh;
     right: 0;
@@ -159,19 +160,51 @@ ul.menu div.separator {
     display: none;
   }
 
+  .menuMobile div {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
   .menuMobile ul {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+
     margin-left: -2vh;
     list-style: none;
+
     width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 
-  .menuMobile li {
+  .menuMobile .menuButton {
     border: 1px solid white;
+    color: white;
+    background: transparent;
     padding: 1vh;
     margin-bottom: 1vh;
-    width: 100%;
     text-align: center;
+  }
+
+  .menuMobile button.menuButton {
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 3px;
+  }
+
+  .menuMobile .menuButton.blue {
+    border: none;
+    background-color: rgb(64, 120, 224);
+  }
+
+  .menuMobile .menuButton.purple {
+    border: none;
+    background-color: rgb(107, 64, 224);
   }
 
   .hamburgerLines {

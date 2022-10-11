@@ -34,6 +34,7 @@ const Menu: FunctionComponent<IProps> = ({ elements, displayLogo }) => {
             }
           >
             <li
+              className={classes.menuButton}
               onClick={() => {
                 setMenuActive((currentValue) => !currentValue);
               }}
@@ -87,11 +88,30 @@ const Menu: FunctionComponent<IProps> = ({ elements, displayLogo }) => {
       <div
         className={`${classes.menuMobile} ${menuActive ? classes.active : ""}`}
       >
-        <ul>{renderProjects()}</ul>
+        <ul>
+          <div>{renderProjects()}</div>
+          <div>
+            <button className={`${classes.menuButton} ${classes.blue}`}>LOGIN</button>
+            <button className={`${classes.menuButton} ${classes.purple}`}>REGISTER</button>
+          </div>
+        </ul>
       </div>
       <div className={classes.loginIcon}>
-        <FaUser color={"white"} size={32} className={classes.loginIcon} onMouseOver={() => {setLoginBoxActive(true)}} />
-        <div className={classes.loginBox} style={loginBoxActive ? {display: "block"} : {display: "none"}} onMouseLeave={() => {setLoginBoxActive(false)}}>
+        <FaUser
+          color={"white"}
+          size={26}
+          className={classes.loginIcon}
+          onMouseOver={() => {
+            setLoginBoxActive(true);
+          }}
+        />
+        <div
+          className={classes.loginBox}
+          style={loginBoxActive ? { display: "block" } : { display: "none" }}
+          onMouseLeave={() => {
+            setLoginBoxActive(false);
+          }}
+        >
           <button>Login</button>
           <button>Register</button>
         </div>
